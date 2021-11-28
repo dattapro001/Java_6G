@@ -125,7 +125,7 @@ public class Swing extends JFrame  {
             }
         });
         
-        setVisible(true);               //very import to visible whole JFrame.
+        setVisible(true);               //very important to visible whole JFrame.
 		}
 	
 	public static void main(String[] args) {
