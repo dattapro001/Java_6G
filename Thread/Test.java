@@ -81,4 +81,45 @@ import java.lang.*;
         		t4.start();
         	}
         	}
+
+              // Examples 
+                      
+                class Test extends Thread{
+                	@Override
+                	public void run() {
+                		for(int i=0;i<10;i++) {
+                			System.out.println("Extended Thread");
+                			try {                            //IF we use sleep outside in the main then we have to use try catch.
+                				Thread.sleep(500);
+                			}catch(Exception e) {
+                				e.printStackTrace();
+                			}
+                		}
+                	}
+                
+               public static void main(String[] args) {
+            	   Test t = new Test();
+            	   t.start();
+               }
+               }
+
+
+        // Finding the Thread Name
+            public class Test{
+            	public static void main(String[] args) {
+            		System.out.print(Thread.currentThread().getName()); //getName use for default Thread name.
+            		Thread.currentThread().setName("What is the name?");
+            		
+            	}
+            }
+
+            
+      //Changing The Current Thread Name
+            public class Test{
+            	public static void main(String[] args) {
+            		Thread.currentThread().setName("What is the name?");
+            		System.out.print(Thread.currentThread().getName()); // To set the Thread name the print function have to use after setName.
+            	}
+            }
+
         
