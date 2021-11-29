@@ -89,7 +89,7 @@ import java.lang.*;
                 	public void run() {
                 		for(int i=0;i<10;i++) {
                 			System.out.println("Extended Thread");
-                			try {                            //IF we use sleep outside in the main then we have to use try catch.
+                			try {                            
                 				Thread.sleep(500);
                 			}catch(Exception e) {
                 				e.printStackTrace();
