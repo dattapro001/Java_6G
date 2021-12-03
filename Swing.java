@@ -66,6 +66,26 @@ public class Swing extends JFrame  {
         add(jp);
         
         
+	//Adding Border Layout to the JFrame
+        JFrame f = new JFrame();
+        f.setSize(300, 300);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setLocationRelativeTo(null);   //Visible the frame on middle of the screen.
+
+        JButton b1 = new JButton("NORTH");; // the button will be labeled as NORTH
+        JButton b2 = new JButton("SOUTH");; // the button will be labeled as SOUTH
+        JButton b3 = new JButton("EAST");; // the button will be labeled as EAST
+        JButton b4 = new JButton("WEST");; // the button will be labeled as WEST
+        JButton b5 = new JButton("CENTER");; // the button will be labeled as CENTER
+
+        f.add(b1, BorderLayout.NORTH);
+        f.add(b2, BorderLayout.SOUTH);
+        f.add(b3, BorderLayout.EAST);
+        f.add(b4, BorderLayout.WEST);
+        f.add(b5, BorderLayout.CENTER);
+        f.setVisible(true);
+		
+		
         //Adding JRadio Button to the JFrame
         JRadioButton r1 = new JRadioButton("1.Computer Engineering");
         JRadioButton r2 = new JRadioButton("2.Civil Engineering");
