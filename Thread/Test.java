@@ -122,4 +122,30 @@ import java.lang.*;
             	}
             }
 
+              
+         // Sleep() Thread
+            public class Runna extends Thread {
+            	
+            	public void run() {            		
+            		try {
+            			for(int i=1;i<=5;i++) {
+            				//Thread.currentThread().setName("Thread-1");
+                			System.out.println(i + " "+Thread.currentThread().getName());
+                			Thread.sleep(5000);
+            			}
+            				
+            			}
+            		
+            		catch(InterruptedException e) {
+            			e.printStackTrace();
+            		}
+            	}
+            		public static void main(String[] args) {
+            		  Runna runna = new Runna();
+            		  runna.start();
+            		  Runna runna1 = new Runna();
+            		  runna1.start();
+            		}
+            }
+
         
