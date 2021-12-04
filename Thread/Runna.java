@@ -76,8 +76,8 @@
         		  
         	  }
 
-     // Other Example of Multiple threading
-
+  
+             // Other Example of Multiple threading
              public class Runna implements Runnable {
                   public void run() {
             		
@@ -97,6 +97,22 @@
                 }
              
 
+          // One Thread Alive or not?
+        public class Runna implements Runnable{
+        	@Override
+        	public void run() {
+        		System.out.println("Thread name :" + Thread.currentThread().getName());
+        	}
+        	
+        	public static void main(String[] args) {
+        		Runna runna = new Runna();
+        		Thread t = new Thread(runna);
+        		t.start();
+        		System.out.println("Main thread name :" + Thread.currentThread().getName());
+        		System.out.println("Thread life :" +Thread.currentThread().isAlive());
+        		System.out.println("Testing t life :" + t.isAlive());
+        		}
+        }
 
 
 
