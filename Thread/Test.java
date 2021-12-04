@@ -169,4 +169,76 @@ import java.lang.*;
               }
               }
 
+
+             //Join() Thread when we try to run any Thread before Main Thread
+           public class Runna extends Thread {  
+        	   public void run() {  
+        		                      
+            		try {
+            			for(int i=1;i<=5;i++) {	
+                   			System.out.println(i + " "+Thread.currentThread().getName());
+                			Thread.sleep(500);
+            			}
+            			}      		
+            		catch(InterruptedException e) {
+            			e.printStackTrace();
+            				
+            			}
+            		}
+            		public static void main(String[] args) throws InterruptedException {
+            			
+            			   Runna runna = new Runna();
+            			   runna.start();
+            			   runna.join();    
+                                try {
+                                	  for(int i=1;i<=5;i++) {
+                          				System.out.println(i + " "+Thread.currentThread().getName());                                              
+                                	Thread.sleep(500);
+                                	  }
+                                }
+                                catch(InterruptedException e) {
+                                	e.printStackTrace();
+                                }
+            		}
+            	}
+
+
+
+            //Join() Thread Running the main Thread before any else Thread
+           public class Runna extends Thread {  
+        	   static Thread mainThread;
+        	   public void run() {  
+        		                      
+            		try {
+            			mainThread.join();
+            			for(int i=1;i<=5;i++) {
+               				
+                   			System.out.println(i + " "+Thread.currentThread().getName());
+                			Thread.sleep(500);
+            			}
+            			}      		
+            		catch(InterruptedException e) {
+            			e.printStackTrace();
+            				
+            			}
+            		}
+            		public static void main(String[] args) throws InterruptedException {
+            			mainThread = currentThread();
+            			   Runna runna = new Runna();
+            			   runna.start();
+            			  // runna.join();    
+                                try {
+                                	  for(int i=1;i<=5;i++) {
+                          				System.out.println(i + " "+Thread.currentThread().getName());                                              
+                                	Thread.sleep(500);
+                                	  }
+                                }
+                                catch(InterruptedException e) {
+                                	e.printStackTrace();
+                                }
+            		}
+            	}
+
+
+
         
