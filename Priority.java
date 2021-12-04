@@ -18,3 +18,11 @@ public class Priority implements Runnable {
 	}
 
 }
+
+
+//Checking main Thread Priority
+     public class Priority{
+    	 public void main(String[] args) {
+    		 System.out.println(Thread.currentThread().getPriority());
+    	 }
+     }
