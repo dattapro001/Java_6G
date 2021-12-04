@@ -115,6 +115,24 @@
         }
 
 
+          // Naming  a Thread
+          public class Runna implements Runnable{
+        	@Override
+        	public void run() {
+        		System.out.println("Runnable Thread name before Naming the Thread");
+        	}
+        	
+        	public static void main(String[] args) throws InterruptedException {
+        		Runna runna = new Runna();
+        		Thread t = new Thread(runna);
+        		Thread.currentThread().setName("Thread 2021");
+        		System.out.println(Thread.currentThread().getName());
+        		t.start();
+        		
+        	}
+          }
+
+
 
 
 
