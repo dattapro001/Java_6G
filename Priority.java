@@ -26,3 +26,22 @@ public class Priority implements Runnable {
     		 System.out.println(Thread.currentThread().getPriority());
     	 }
      }
+
+
+//Child Thread Inherite The Priority
+        public class Priority extends Thread{
+        	@Override
+        	public void run() {
+        		System.out.println("Child Thread");
+        		System.out.println("Child Thread Priority :" + Thread.currentThread().getPriority());
+        	}
+        	public static void main(String[] args) {
+        		System.out.println("Main Thread new Priority :" + Thread.currentThread().getPriority());
+        		Thread.currentThread().setPriority(10);
+        		System.out.println("Main Thread old Priority :" + Thread.currentThread().getPriority());
+        		Priority pro = new Priority();
+        	    pro.start();
+        	}
+        }
+
+
