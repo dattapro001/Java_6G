@@ -148,4 +148,25 @@ import java.lang.*;
             		}
             }
 
+
+              //Yield() Thread
+              public class Runna extends Thread{
+            	  public void run() {
+            		
+            			  for(int i=1;i<=5;i++) {
+            				  System.out.println(Thread.currentThread().getName()+" - "+i);
+   			  }
+		
+            	  }
+          	  
+              public static void main(String[] args) {
+            	  Runna runna = new Runna();
+            	  runna.start();
+            	  Thread.yield();
+            	  for(int i=1;i<=5;i++) {
+    				  System.out.println(Thread.currentThread().getName()+" - "+i);
+            	  }
+              }
+              }
+
         
