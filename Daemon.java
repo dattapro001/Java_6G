@@ -55,5 +55,26 @@ public class Daemon extends Thread {
 	}
          }
 
+       
+          //No task For main Thread
+            public class Daemon extends Thread {
+	public void run() {
+		if(Thread.currentThread().isDaemon()) {
+			System.out.println("Daemon Thread");
+		}
+		else {
+			System.out.println("Child Thread");
+		}
+	}
+
+	public static void main(String[] args) {
+		Daemon dem = new Daemon();
+		dem.setDaemon(true);  //Set the dem is daemon or not
+		dem.start();
+		// No output will be show.
+	}
+
+}
+
 
 
