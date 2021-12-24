@@ -66,9 +66,7 @@ public class Calculator extends JFrame{
         btnEqual = new JButton("=");btnEqual.setFont(font);panel2.add(btnEqual);btnEqual.setBackground(Color.GREEN);
         btnSqrt = new JButton("√");btnSqrt.setFont(font);panel2.add(btnSqrt);btnSqrt.setBackground(new Color(51,204,255));
         btnDouble = new JButton("00");btnDouble.setFont(font);panel2.add(btnDouble);btnDouble.setBackground(Color.YELLOW);
-        btnPercentage = new JButton("%");
-        btnPercentage.setFont(font);panel2.add(btnPercentage);
-        btnPercentage.setBackground(new Color(51,204,255));
+        btnPercentage = new JButton("%");btnPercentage.setFont(font);panel2.add(btnPercentage);btnPercentage.setBackground(new Color(51,204,255));
         btnPI = new JButton("π");btnPI.setFont(font);panel2.add(btnPI);btnPI.setBackground(new Color(51,204,255));
         btnLog = new JButton("log") ;btnLog.setFont(font);panel2.add(btnLog);btnLog.setBackground(new Color(51,204,255));
         btnLn = new JButton("ln") ;btnLn.setFont(font);panel2.add(btnLn);btnLn.setBackground(new Color(51,204,255));
