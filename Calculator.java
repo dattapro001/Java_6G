@@ -174,7 +174,6 @@ public class Calculator extends JFrame{
             public void actionPerformed(ActionEvent e){
                 if(e.getSource()==btnDouble) {
                     txt.setText(txt.getText()+"00");
-                    flag = 11;
                 }
             }
         });
