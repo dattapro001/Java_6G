@@ -27,3 +27,5 @@ public class DbConnect {
 // Check Youtube or any video if you dont remember how to Connect with Database.
 //Download mysql-connector-java-8.0.27 from google and the connect with it in eclipce in the project "JRE System Librery".
 // Build path ->  configure bilt path -> then choice "Class path" from under -> Add External JRE -> Choice the "ysql-connector-java-8.0.27" -> Apply and Close.
+
+
