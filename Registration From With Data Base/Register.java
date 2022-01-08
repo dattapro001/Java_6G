@@ -119,62 +119,62 @@ public class Register extends JFrame {
 
                 //Validation
 
-           //     String userNameRegex = "^[a-zA-Z0-9.]+$";
+                String userNameRegex = "^[a-zA-Z0-9.]+$";
                 
-//                if(!Pattern.matches(userNameRegex,userName)){
-//                    JOptionPane.showMessageDialog(null, "In-valid User Name");
-//                }
-//                else{
-//                    JOptionPane.showMessageDialog(null,"Valid user Name");
-//                }
-//                
-//                String emailRegex = "^[a-z0-9]+@[a-z]+.[a-z]+$";
-//                
-//                if(!Pattern.matches(emailRegex,email)){
-//                    JOptionPane.showMessageDialog(null, "In-valid Email Address");
-//                }
-//                else{
-//                    JOptionPane.showMessageDialog(null,"Valid Email Address");
-//                }
-//                String mobileRegex = "(\\+88)?-?01[3-9]\\d{8}";
-//
-//               if(!Pattern.matches(mobileRegex,mobile)){
-//                    JOptionPane.showMessageDialog(null, "In-valid Mobile Number");
-//                }
-//                else{
-//                    JOptionPane.showMessageDialog(null,"Valid Mobile Number");
-//                }
-//               
-//               String passRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{6,20}";
-//               
-//
-//               if(!Pattern.matches(passRegex,pass)){
-//                    JOptionPane.showMessageDialog(null, "In-valid Password");
-//                }
-//                else{
-//                    JOptionPane.showMessageDialog(null,"Valid password");
-//                }
-//               
-//              String conpassRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{6,20}";
-//               
-//
-//               if(!Pattern.matches(conpassRegex,conpass)){
-//                    JOptionPane.showMessageDialog(null, "In-valid Confirm Password");
-//                }
-//                else{
-//                    JOptionPane.showMessageDialog(null,"Valid Confirm Password");
-//                }
-//               
-//              String addressRegex = "^(?=.*[0-9])(?=.*[a-z])+,(?=.*[a-z]).{6,30}";
-//               
-//
-//               if(!Pattern.matches(addressRegex,add)){
-//                    JOptionPane.showMessageDialog(null, "In-valid Address");
-//                }
-//                else{
-//                    JOptionPane.showMessageDialog(null,"Valid Address");
-//                }
-//               
+                if(!Pattern.matches(userNameRegex,userName)){
+                    JOptionPane.showMessageDialog(null, "In-valid User Name");
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Valid user Name");
+                }
+                
+                String emailRegex = "^[a-z0-9]+@[a-z]+.[a-z]+$";
+                
+                if(!Pattern.matches(emailRegex,email)){
+                    JOptionPane.showMessageDialog(null, "In-valid Email Address");
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Valid Email Address");
+                }
+                String mobileRegex = "(\\+88)?-?01[3-9]\\d{8}";
+
+               if(!Pattern.matches(mobileRegex,mobile)){
+                    JOptionPane.showMessageDialog(null, "In-valid Mobile Number");
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Valid Mobile Number");
+                }
+               
+               String passRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{6,20}";
+               
+
+               if(!Pattern.matches(passRegex,pass)){
+                    JOptionPane.showMessageDialog(null, "In-valid Password");
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Valid password");
+                }
+               
+              String conpassRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{6,20}";
+               
+
+               if(!Pattern.matches(conpassRegex,conpass)){
+                    JOptionPane.showMessageDialog(null, "In-valid Confirm Password");
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Valid Confirm Password");
+                }
+               
+              String addressRegex = "^(?=.*[0-9])(?=.*[a-z])+,(?=.*[a-z]).{6,30}";
+               
+
+               if(!Pattern.matches(addressRegex,add)){
+                    JOptionPane.showMessageDialog(null, "In-valid Address");
+                }
+                 else{
+                    JOptionPane.showMessageDialog(null,"Valid Address");
+                }
+               
 
                 String insertQuery = "INSERT INTO `record`(`Name`, `Email`, `Mobile`, `Password`, `Confirm Password`, `Address`) VALUES ('" + userName + "','" + email + "','" + mobile + "','" + pass + "','" + conpass + "','" + add + "')";
 
